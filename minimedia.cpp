@@ -20,6 +20,7 @@
 #include <binder/ProcessState.h>
 #include <binder/IServiceManager.h>
 #include <CameraService.h>
+#include <AudioPolicyService.h>
 #include <binder/MemoryHeapBase.h>
 #include <MediaPlayerService.h>
 #if ANDROID_MAJOR >= 6
@@ -64,6 +65,7 @@ main(int, char**)
 
     MediaPlayerService::instantiate();
     CameraService::instantiate();
+    AudioPolicyService::instantiate();
 
 #if ANDROID_MAJOR >= 6
     FakeCameraServiceProxy::instantiate();
